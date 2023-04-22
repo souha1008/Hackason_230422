@@ -9,10 +9,12 @@ public class Fade : MonoBehaviour
     public Color color;
     public float loopCount;
     public bool isEnd;
+    public bool isFading;
     // Start is called before the first frame update
     void Start()
     {
         isEnd = false;
+        isFading = false;
     }
 
     // Update is called once per frame
@@ -67,14 +69,19 @@ public class Fade : MonoBehaviour
 
     public void StartFade(bool b)// true‚ÅIn false‚ÅOut
     {
-        if(b)
+        if(!isFading)
         {
-            StartCoroutine("FadeIn");
-            Debug.Log("FadeInStart");
-        }
-        else
-        {
-            StartCoroutine("FadeOut");
+            if (b)
+            {
+                StartCoroutine("FadeIn");
+                Debug.Log("FadeInStart");
+                isFading = true;
+            }
+            else
+            {
+                StartCoroutine("FadeOut");
+                isFading = true;
+            }
         }
     }
 }
