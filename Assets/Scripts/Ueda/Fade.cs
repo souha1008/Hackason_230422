@@ -43,6 +43,7 @@ public class Fade : MonoBehaviour
             image.color = new_color;
         }
         isEnd = true;
+        isFading = false;
     }
 
     IEnumerator FadeOut()
@@ -65,6 +66,7 @@ public class Fade : MonoBehaviour
             image.color = new_color;
         }
         isEnd = true;
+        isFading = false;
     }
 
     public void StartFade(bool b)// true‚ÅIn false‚ÅOut
