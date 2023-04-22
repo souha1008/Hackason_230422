@@ -9,17 +9,20 @@ public class TextApply : MonoBehaviour
 {
     private ScoreManager scoreManager;
     [SerializeField] private Text scoretext;
+    int score;
     // Start is called before the first frame update
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
-        scoretext.text = "SCORE :" + scoreManager.Score.ToString();
+       score = scoreManager.Score;
+
+        scoretext.text = "SCORE :" + score.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+ 
     }
 }
