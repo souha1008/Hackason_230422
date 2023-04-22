@@ -33,7 +33,11 @@ public class GameManager : MonoBehaviour
             if (fade.isEnd)
             {
                 // ここでリザルトにスコアを持っていく処理
+                ObjCheck objcheck = Scoreobj.GetComponent<ObjCheck>();
                 scoreManager.Score = Scoreobj.GetComponent<ObjCheck>().Score;
+                objcheck.HiScoreUpdate(scoreManager.Score);
+                objcheck.Writetext();
+
                 //========================================
 
                 SceneManager.LoadScene("ResultScene");
