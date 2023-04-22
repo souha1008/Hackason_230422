@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Fade fade;
     public bool isPlayable;
     public bool isFade;
-    private ScoreManager scoreManager;
+    [SerializeField] ScoreManager scoreManager;
     [SerializeField]private GameObject Scoreobj;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         fade.StartFade(true);
         isPlayable = false;
         isFade = false;
-        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        //scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
     }
 
