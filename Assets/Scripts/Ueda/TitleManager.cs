@@ -10,8 +10,9 @@ public class TitleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isPlayable = false;
+        //Debug.Log("TitleStart");
         fade.StartFade(true);
+        isPlayable = false;
     }
 
     // Update is called once per frame
