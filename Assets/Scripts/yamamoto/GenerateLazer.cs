@@ -20,7 +20,6 @@ public class GenerateLazer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             HardLazer.SetActive(true);
-            Debug.Log("Hard");
             Invoke("HardLazerNotActive", HiddenTime);
         }
 
@@ -28,7 +27,6 @@ public class GenerateLazer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             SoftLazer.SetActive(true);
-            Debug.Log("Soft");
             Invoke("SoftLazerNotActive", HiddenTime);
 
         }
