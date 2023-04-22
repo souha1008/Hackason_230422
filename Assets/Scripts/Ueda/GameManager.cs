@@ -6,17 +6,23 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Fade fade;
-    bool isPlayable;
+    public bool isPlayable;
+    public bool isFade;
     // Start is called before the first frame update
     void Start()
     {
         fade.StartFade(true);
         isPlayable = false;
+        isFade = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isFade)
+        {
+            fade.StartFade(false);
+        }
         if(isPlayable)  // ƒQ[ƒ€–{‘Ì‚Ìƒ‹[ƒ‹‚ğ‘‚¢‚Ä‚æ‚¢
         {
             if (Input.GetKeyDown(KeyCode.Return))
