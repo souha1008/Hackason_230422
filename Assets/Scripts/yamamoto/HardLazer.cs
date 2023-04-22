@@ -8,15 +8,23 @@ public class HardLazer : MonoBehaviour
 
     [SerializeField] private Sprite HardSprite;
 
+    public GameObject score;
+    public GameObject LifeManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        score = GameObject.Find("Score");
+        LifeManager = GameObject.Find("LifeManager");
+            
     }
 
     // Update is called once per frame
     void Update()
     {
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,12 +35,14 @@ public class HardLazer : MonoBehaviour
 
             spriteRenderer.sprite = HardSprite;
 
+            score.GetComponent<ObjCheck>().AddScore(10);
+
         }
 
         if (collision.gameObject.tag == "Hard")
         {
             Destroy(collision.gameObject);
-
+            LifeManager.GetComponent<LifeManager>().AddLife(-1);
         }
     }
 }

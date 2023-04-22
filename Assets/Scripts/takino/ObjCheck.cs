@@ -5,6 +5,7 @@ using System.IO;
 
 public class ObjCheck : MonoBehaviour
 {
+
     // Start is called before the first frame update
     [HideInInspector] public int Score;
     private HiScore hiScore;
@@ -44,9 +45,10 @@ public class ObjCheck : MonoBehaviour
         }
     }
 
-    private void AddScore(int score)
+    public void AddScore(int score)
     {
         Score += score;
+        Debug.Log("aa");
     }
 
     private void Writetext()
