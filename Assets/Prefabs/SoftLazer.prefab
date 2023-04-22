@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5940505037684212487}
   - component: {fileID: 3032360834967374381}
   - component: {fileID: 8503306533188387949}
+  - component: {fileID: -4651003241342005502}
+  - component: {fileID: 3147737230637502334}
   m_Layer: 0
   m_Name: SoftLazer
   m_TagString: SoftLazer
@@ -110,8 +112,42 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!50 &-4651003241342005502
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241649677777616103}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3147737230637502334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241649677777616103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f224c372b637f846ad69d27fd6abe43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoftSprite: {fileID: 21300000, guid: 750fb439984f26742992c4a2cdbc9541, type: 3}
 --- !u!1 &5566154429956387453
 GameObject:
   m_ObjectHideFlags: 0

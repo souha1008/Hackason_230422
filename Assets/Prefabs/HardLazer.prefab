@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5186256958034127658}
   - component: {fileID: 4583746323137307136}
   - component: {fileID: 7172106511594843200}
+  - component: {fileID: 9186887629611329181}
+  - component: {fileID: -2142051162742483528}
   m_Layer: 0
   m_Name: HardLazer
   m_TagString: HardLazer
@@ -110,8 +112,42 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!50 &9186887629611329181
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761759674971067594}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-2142051162742483528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761759674971067594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcdcdfec2168b44db0d9a6332341ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HardSprite: {fileID: 21300000, guid: a7f2bf1ca2141154fb881ec4c0977689, type: 3}
 --- !u!1 &6392669544235129424
 GameObject:
   m_ObjectHideFlags: 0

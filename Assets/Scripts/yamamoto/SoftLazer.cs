@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HardLazer : MonoBehaviour
+public class SoftLazer : MonoBehaviour
 {
     private BoxCollider2D boxCollider2D;
 
-    [SerializeField] private Sprite HardSprite;
+    [SerializeField] private Sprite SoftSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -21,18 +21,21 @@ public class HardLazer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Soft")
+        if(collision.gameObject.tag == "Hard")
         {
             var spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
 
-            spriteRenderer.sprite = HardSprite;
+            spriteRenderer.sprite = SoftSprite;
+
 
         }
 
-        if (collision.gameObject.tag == "Hard")
+        if (collision.gameObject.tag == "Soft")
         {
             Destroy(collision.gameObject);
 
+
         }
+
     }
 }
