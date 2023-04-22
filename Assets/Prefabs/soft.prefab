@@ -98,3 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.006
+  destroyTime: 5
+  spawnManager: {fileID: 6599833389499057272, guid: 6972580f2e221b84e88a725ae9ced287, type: 3}
