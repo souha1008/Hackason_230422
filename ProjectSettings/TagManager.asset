@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Hard
   - Soft
-  - HardLazer
-  - SoftLazer
   layers:
   - Default
   - TransparentFX
