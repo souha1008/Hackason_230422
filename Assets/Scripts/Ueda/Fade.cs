@@ -70,6 +70,7 @@ public class Fade : MonoBehaviour
         if(b)
         {
             StartCoroutine("FadeIn");
+            Debug.Log("FadeInStart");
         }
         else
         {
