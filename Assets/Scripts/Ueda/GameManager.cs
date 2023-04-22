@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [SerializeField] Fade fade;
     bool isPlayable;
     // Start is called before the first frame update
     void Start()
     {
-        isPlayable = false;
         fade.StartFade(true);
+        isPlayable = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlayable)
+        if(isPlayable)  // ゲーム本体のルールを書いてよい
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -25,7 +25,11 @@ public class TitleManager : MonoBehaviour
             }
             if (fade.isEnd)
             {
-                SceneManager.LoadScene("GameScene");
+                // ここでリザルトにスコアを持っていく処理
+                
+                //========================================
+
+                SceneManager.LoadScene("ResultScene");
             }
         }
         else
@@ -36,5 +40,10 @@ public class TitleManager : MonoBehaviour
                 fade.isEnd = false;
             }
         }
+    }
+
+    void SendScore(Scene next,LoadSceneMode mode)
+    {
+
     }
 }

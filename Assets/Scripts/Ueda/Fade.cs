@@ -30,7 +30,7 @@ public class Fade : MonoBehaviour
         float interval = 255.0f / loopCount;
 
         // 色を徐々に変えるループ
-        for (float alpha = 0.0f; alpha > 0.0f; alpha -= interval)
+        for (float alpha = 255.0f; alpha > 0.0f; alpha -= interval)
         {
             // 待ち時間
             yield return new WaitForSeconds(waitTime);
@@ -40,6 +40,7 @@ public class Fade : MonoBehaviour
             new_color.a = alpha / 255.0f;
             image.color = new_color;
         }
+        isEnd = true;
     }
 
     IEnumerator FadeOut()
