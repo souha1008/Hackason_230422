@@ -12,7 +12,7 @@ public class ObjCheck : MonoBehaviour
     [SerializeField] private int LostScore;
     [SerializeField] private int MissScore;
     private HiScore hiScore;
-    private string FilePath = "./Assets/ScoreTexts.txt";
+    private string FilePath = "./Assets/Score/ScoreTexts.txt";
     private StreamWriter sw;
     private StreamReader sr;
     void Start()
