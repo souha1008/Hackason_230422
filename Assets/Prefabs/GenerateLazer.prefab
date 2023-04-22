@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093f6db350657204f8bbc146dd0c5880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HardLazer: {fileID: 0}
-  SoftLazer: {fileID: 0}
+  HardLazer: {fileID: 761759674971067594, guid: 874ec73766427d3469a086254980dad8, type: 3}
+  SoftLazer: {fileID: 2241649677777616103, guid: 9a021176fbaf6e54c9757884b9f9fefd, type: 3}
   HiddenTime: 0.1
