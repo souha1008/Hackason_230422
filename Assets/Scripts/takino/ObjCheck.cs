@@ -7,10 +7,6 @@ public class ObjCheck : MonoBehaviour
 {
     // Start is called before the first frame update
     [HideInInspector] public int Score;
-    [SerializeField] private int HardScore;
-    [SerializeField] private int SoftScore;
-    [SerializeField] private int LostScore;
-    [SerializeField] private int MissScore;
     private HiScore hiScore;
     private string FilePath = "./Assets/Score/ScoreTexts.txt";
     private StreamWriter sw;
@@ -48,18 +44,9 @@ public class ObjCheck : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void AddScore(int score)
     {
-        if (collision.gameObject.tag == "Hard")
-        {
-            Score += HardScore;
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.tag == "Soft")
-        {
-            Score += SoftScore;
-            Destroy(collision.gameObject);
-        }
+        Score += score;
     }
 
     private void Writetext()
@@ -73,7 +60,7 @@ public class ObjCheck : MonoBehaviour
         sw.Close();
     }
 
-    private void HiScoreUpdate(int score)
+    public void HiScoreUpdate(int score)
     {
         
 
