@@ -10,4 +10,10 @@ public class ScoreManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
     }
+
+    public void Start()
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("ScoreManager");
+        if (1 < objs.Length) Destroy(objs[1]);
+    }
 }

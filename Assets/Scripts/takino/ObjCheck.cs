@@ -38,11 +38,6 @@ public class ObjCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetKeyDown(KeyCode.Return))
-        {
-            HiScoreUpdate(Score);
-            Writetext();
-        }
     }
 
     public void AddScore(int score)
@@ -51,7 +46,7 @@ public class ObjCheck : MonoBehaviour
         Debug.Log("aa");
     }
 
-    private void Writetext()
+    public void Writetext()
     {
         sw = new StreamWriter(FilePath);
         for(int i = 0;i < hiScore.Score.Length;i++)
