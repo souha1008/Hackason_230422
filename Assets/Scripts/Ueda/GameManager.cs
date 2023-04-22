@@ -25,10 +25,6 @@ public class GameManager : MonoBehaviour
         }
         if(isPlayable)  // ゲーム本体のルールを書いてよい
         {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                fade.StartFade(false);
-            }
             if (fade.isEnd)
             {
                 // ここでリザルトにスコアを持っていく処理
