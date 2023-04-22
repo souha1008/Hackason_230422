@@ -8,10 +8,15 @@ public class SoftLazer : MonoBehaviour
 
     [SerializeField] private Sprite SoftSprite;
 
+    public GameObject score;
+    public GameObject LifeManager;
+
     // Start is called before the first frame update
     void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        score = GameObject.Find("Score");
+        LifeManager = GameObject.Find("LifeManager");
     }
 
     // Update is called once per frame
@@ -27,6 +32,7 @@ public class SoftLazer : MonoBehaviour
 
             spriteRenderer.sprite = SoftSprite;
 
+            score.GetComponent<ObjCheck>().AddScore(10);
 
         }
 
@@ -34,7 +40,7 @@ public class SoftLazer : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-
+            LifeManager.GetComponent<LifeManager>().AddLife(-1);
         }
 
     }
